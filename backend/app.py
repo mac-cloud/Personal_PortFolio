@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for
-import MySQLdb
+import mysql.connector
 
 app = Flask(__name__)
 
 # Database connection
-db = MySQLdb.connect(host="localhost", user="root", passwd="admin123")
+db = mysql.connector.connect(host="localhost", user="root", passwd="admin123")
 cursor = db.cursor()
 
 def initialize_database():
