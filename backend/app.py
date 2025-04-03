@@ -7,7 +7,6 @@ app = Flask(__name__)
 db = MySQLdb.connect(host="localhost", user="root", passwd="admin123")
 cursor = db.cursor()
 
-# Function to initialize the database
 def initialize_database():
     with open("database.sql", "r") as sql_file:
         sql_script = sql_file.read()
