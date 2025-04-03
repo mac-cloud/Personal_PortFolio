@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <style>
+    /* Existing styles */
+    #home-main {
+      background-image: url("{{ url_for('static', filename='images/devops.png') }}");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/project-list">Projects</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    
+    <!-- New section for computer and volunteering activities -->
+    
+  </header>
+  <section id="activities">
+    <div class="activities-container">
+      <div class="activity">Computer Lab Workshops</div>
+      <div class="activity">Community Volunteering(Nairobi DevOps Community)</div>
+      <div class="activity">Coding Bootcamp(Karatina University)</div>
+      <div class="activity">Tech Meetups</div>
+      <!-- Add more activities as needed -->
+    </div>
+  </section>
+  <main id="home-main">
+    <section id="intro">
+      <div class="intro-content">
+        <img src="{{ url_for('static', filename='images/image.jpeg') }}" alt="My Profile">
+        <div class="text-content">
+          <h2>Hi, I'm Mbugua</h2>
+          <h2>Welcome to My Portfolio</h2>
+          <p>I'm a passionate developer dedicated to creating cutting-edge web experiences.</p>
+          <div class="computer-container">
+            <img src="{{ url_for('static', filename='images/computer.gif') }}" alt="Hands Typing on Computer" class="rotating-computer">
+          </div>
+          <a href="/contact">
+            <button class="move-button"><h3>Talk To Me</h3></button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section with Background Images -->
+    <section id="skills">
+      <div class="skill-card coding">
+        <div class="overlay">
+          <h3>Full-Stack Development</h3>
+          <p style="color: white">Building robust web applications using Python, JavaScript, React, and Django.</p>
+        </div>
+      </div>
+
+      <div class="skill-card devops">
+        <div class="overlay">
+          <h3>DevOps & Cloud</h3>
+          <p style="color: white">Experience with Docker, Kubernetes, CI/CD, and cloud deployments on Azure.</p>
+        </div>
+      </div>
+
+      <div class="skill-card cybersecurity">
+        <div class="overlay">
+            <h3>Networking</h3>
+            <p style="color: white">Designing and implementing secure network architectures while ensuring optimal performance and reliability.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 MacCloud Solutions. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

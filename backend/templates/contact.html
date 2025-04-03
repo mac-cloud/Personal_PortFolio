@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/project-list">Projects</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you would like to collaborate, ask questions, or just say hello, feel free to reach out!</p>
+
+            <div class="contact-details">
+                <div class="contact-method">
+                    <h3>Email</h3>
+                    <p>You can reach me via email at <a href="mailto:your-email@example.com">macbugua@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Phone</h3>
+                    <p>Feel free to call or text me at <a href="tel:+123456789">+254 792 442 481</a></p>
+                    <p>💬 Whatsapp <a href="tel:+123456789">  +254 792 442 481</a></p>
+                </div>
+                </div>
+
+                <div class="contact-method">
+                    <h3>Social Media</h3>
+                    <p>💼 <a href="https://www.linkedin.com/in/maxwel-mbugua-1a2a74350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></p>
+                </div>
+                <div class="contact-method">
+            
+                    <p>📸 <a href="https://www.linkedin.com/in/your-profile" target="_blank">Instagram</a></p>
+                </div>
+                <div class="contact-method">
+                    
+                    <p>🐦 <a href="https://x.com/MmbBugush?s=08" target="_blank">X</a></p>
+                  
+                </div>
+            </div>
+        </section>
+
+       
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MacCloud Solutions. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

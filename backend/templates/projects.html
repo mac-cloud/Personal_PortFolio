@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 >Add a New Project</h2>
+
+    <form id="projectForm">
+        <label for="title">Project Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="image_url">Image URL:</label>
+        <input type="url" id="image_url" name="image_url">
+
+        <label for="github_link">GitHub Link:</label>
+        <input type="url" id="github_link" name="github_link">
+
+        <button type="submit">Add Project</button>
+    </form>
+
+    <script>
+        document.getElementById("projectForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+    
+            const formData = {
+                title: document.getElementById("title").value,
+                description: document.getElementById("description").value,
+                image_url: document.getElementById("image_url").value,
+                github_link: document.getElementById("github_link").value
+            };
+    
+            try {
+                const response = await fetch("/add_project", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+    
+                // Check if the response is valid JSON and successful
+                if (!response.ok) {
+                    throw new Error('Server error occurred');
+                }
+    
+                const result = await response.json();  // Parse the response JSON
+    
+                if (result.message) {
+                    alert(result.message);  // Show success message
+                } else {
+                    alert('Project added successfully!');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error while submitting the project: ' + error.message);
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

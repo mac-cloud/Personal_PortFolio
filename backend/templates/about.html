@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+
+
+       
+        <h1>My Portfolio</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/project-list">Projects</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <section id="activities">
+        <div class="activities-container">
+          <div class="activity">Computer Lab Workshops</div>
+          <div class="activity">Community Volunteering(Nairobi DevOps Community)</div>
+          <div class="activity">Coding Bootcamp(Karatina University)</div>
+          <div class="activity">Tech Meetups</div>
+          <!-- Add more activities as needed -->
+        </div>
+      </section>
+    <main>
+        <!-- Introduction Section -->
+        <section id="about-intro">
+            <div class="intro-content">
+                <img src="{{ url_for('static', filename='images/image.jpeg') }}" alt="Profile Picture" style="margin-top: -570px;">
+                <div class="text-content">
+                    <h2>Hi, I'm Mbugua</h2>
+                    <p>I am a dedicated Computer Science major with a passion for technology and innovation. Currently, I'm an intern at a state law office, applying my skills to solve real-world problems with software solutions. I specialize in the MERN stack, Python, Django, and I'm actively learning DevOps and cloud computing to expand my technical expertise.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-list">
+                <div class="skill-card">
+                    <h3>MERN Stack</h3>
+                    <p>Experienced with MongoDB, Express.js, React, and Node.js for building full-stack web applications.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Python & Django</h3>
+                    <p>Familiar with Python for backend development and Django for building scalable web applications.</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>DevOps & Cloud Computing</h3>
+                    <p>Currently expanding knowledge in DevOps practices, cloud infrastructure (AWS, Azure), and CI/CD pipelines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills Section -->
+        <section id="soft-skills">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li><strong>Problem-Solving:</strong> Passionate about finding creative solutions to complex challenges.</li>
+                <li><strong>Teamwork:</strong> Enjoys collaborating with others in team-based environments to achieve common goals.</li>
+                <li><strong>Communication:</strong> Skilled at explaining complex technical concepts in simple terms for non-technical audiences.</li>
+                <li><strong>Adaptability:</strong> Eager to learn new technologies and embrace change in fast-paced environments.</li>
+            </ul>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Intern | State Law Office</h3>
+                <p>January 2024 - Present</p>
+                <p>Working as an intern in a state law office, applying my programming skills to improve the efficiency and automate various legal processes. Collaborating with the IT department to build and maintain internal applications.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Freelancer | Web Development Projects</h3>
+                <p>June 2023 - Present</p>
+                <p>Building full-stack web applications for clients, leveraging the MERN stack and Django to create dynamic websites and services tailored to their needs.</p>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MacCloud Solutions. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
