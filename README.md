@@ -44,17 +44,17 @@ Technologies Used
 
 
 Features
-   # Responsive Design: The website adapts to various screen sizes.
+    Responsive Design: The website adapts to various screen sizes.
 
-   # Portfolio Section: Displays projects with images, descriptions, and links to GitHub.
+    Portfolio Section: Displays projects with images, descriptions, and links to GitHub.
 
-   # Contact Form: Users can send a message via a form which is saved to a MySQL database.
+   Contact Form: Users can send a message via a form which is saved to a MySQL database.
 
-   # Skills Section: Displays key skills in web development, DevOps, and networking.
+    Skills Section: Displays key skills in web development, DevOps, and networking.
 
-   # Activities Section: Lists volunteer activities and other developer contributions.
+    Activities Section: Lists volunteer activities and other developer contributions.
 
-   # Social Media Links: Links to Facebook, LinkedIn, Twitter, etc., for easy contact.
+    Social Media Links: Links to Facebook, LinkedIn, Twitter, etc., for easy contact.
 
 Installation
    To run the project locally, follow these steps:
