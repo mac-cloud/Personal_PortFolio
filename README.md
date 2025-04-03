@@ -81,9 +81,9 @@ Install required Python packages:
    pip install -r requirements.txt
 Set up the MySQL database:
 
-   #Log into MySQL:
+   # Log into MySQL:
 
-   #mysql -u root -p
+   # mysql -u root -p
 
 Configure Flask to connect to the database:
 
