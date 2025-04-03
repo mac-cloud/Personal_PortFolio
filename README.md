@@ -78,12 +78,12 @@ Create a Python Virtual Environment:
    # venv\Scripts\activate  (windows)
 Install required Python packages:
 
-   # pip install -r requirements.txt
+   pip install -r requirements.txt
 Set up the MySQL database:
 
-   # Log into MySQL:
+   Log into MySQL:
 
-   # mysql -u root -p
+   mysql -u root -p
 
 Configure Flask to connect to the database:
 
@@ -91,10 +91,10 @@ In your app.py (Flask application), configure the database connection:
 
 Run the Flask Application:
  
-  # python app.py
+  python app.py
 Access the site in your browser:
 
-   # Open http://127.0.0.1:5000/ in your web browser.
+   Open http://127.0.0.1:5000/ in your web browser.
 
 Setup and Configuration
 Database Configuration: Ensure your Flask app is configured to use the correct MySQL database connection string.
