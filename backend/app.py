@@ -3,7 +3,7 @@ import psycopg2
 from psycopg2 import sql
 
 app = Flask(__name__)
-database_url = "postgresql://web_postgresql_w2wm_user:WE9n3h8BO5KQG4NXfhe8tO4afgZETitD@dpg-cvngq97fte5s73ccdnrg-a.oregon-postgres.render.com/web_postgresql_w2wm"
+database_url = "postgresql://web_postgresql_w2wm_user:WE9n3h8BO5KQG4NXfhe8tO4afgZETitD@dpg-cvngq97fte5s73ccdnrg-a/web_postgresql_w2wm"
 # Database connection
 def get_db_connection():
     connection = psycopg2.connect(
