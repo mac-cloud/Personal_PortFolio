@@ -1,12 +1,16 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for
 import psycopg2
 from psycopg2 import sql
+import os
+
 
 app = Flask(__name__)
-database_url = "postgresql://web_postgresql_w2wm_user:WE9n3h8BO5KQG4NXfhe8tO4afgZETitD@dpg-cvngq97fte5s73ccdnrg-a/web_postgresql_w2wm"
-# Database connection
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://web_postgresql_w2wm_user:WE9n3h8BO5KQG4NXfhe8tO4afgZETitD@dpg-cvngq97fte5s73ccdnrg-a/web_postgresql_w2wm")
+
 def get_db_connection():
     connection = psycopg2.connect(
+        DATABASE_URL,
+        sslmode="require",
         host="dpg-cvngq97fte5s73ccdnrg-a", 
         dbname="web_postgresql_w2wm",  
         user="web_postgresql_w2wm_user",  
